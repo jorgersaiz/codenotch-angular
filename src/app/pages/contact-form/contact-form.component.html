@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <form class="row g-3">
+            <div class="col-md-6">
+                <app-input-text [labelText]="'Email'" [inputType]="'email'"></app-input-text>
+            </div>
+            <div class="col-md-6">
+                <app-input-text [labelText]="'Password'" [inputType]="'password'"></app-input-text>
+            </div>
+            <div class="col-12">
+                <app-input-text [labelText]="'Address'" [inputType]="'text'" [placeholder]="'Calle principe de Vergara'"></app-input-text>
+            </div>
+            <div class="col-12">
+                <app-input-text [labelText]="'Address 2'" [inputType]="'text'" [placeholder]="'195 3B'"></app-input-text>
+            </div>
+            <div class="col-md-6">
+                <app-input-text [labelText]="'City'" [inputType]="'text'"></app-input-text>
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <app-input-text [labelText]="'Zip'" [inputType]="'text'"></app-input-text>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Check me out
+                    </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <app-button></app-button>
+            </div>
+        </form>
+    </div>
+</div>
