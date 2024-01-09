@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 [class]="cssClass">One-way binding</h1>
+            <p (click)="changeClass('color-red')">Name: {{person.name}}</p>
+            <p (click)="changeClass('color-blue')">Surname: {{person.surname}}</p>
+            <p>Age: {{person.age}}</p>
+            <p>Job: {{person.job}}</p>
+            <img src="{{img}}" alt="">
+            <!-- <img [src]="img" alt=""> -->
+
+            <!-- <input type="text" name="" id="" #inputName>
+            <input type="text" name="" id="" #inputSurname>
+            <input type="text" name="" id="" #inputAge>
+            <input type="text" name="" id="" #inputJob>
+            <button (click)="changeName(inputName, inputSurname, inputAge, inputJob)">Cambiar nombre</button> -->
+        </div>
+
+        <div class="col">
+            <h1>Two-way binding</h1>
+            <input type="text" [(ngModel)]="cssClass">
+        </div>
+    </div>
+</div>
+
+
