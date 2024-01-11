@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Navigation } from '../../models/navigation';
 
 @Component({
   selector: 'app-header',
@@ -9,5 +10,26 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-
+  public navigationList: Navigation[] = [
+    {
+      path: '/homepage',
+      title: 'Home'
+    },
+    {
+      path: '/about-us',
+      title: 'About us'
+    },
+    {
+      path: '/contact',
+      title: 'Contact'
+    },
+    {
+      path: '/data-binding',
+      title: 'Data-binding'
+    },
+    {
+      path: '/directives',
+      title: 'Directives'
+    }
+  ]
 }

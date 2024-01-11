@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Bucle for</h1>
+            @for(person of people; track person.name; let i = $index; let even = $even) {
+                @if (filterKeyword === person.name || !filterKeyword) {
+                    <p [ngClass]="person.premium ? 'green-color' : 'red-color'">{{i}}. Name: {{person.name | entrecomillar}} - Surname: {{person.surname}} - Age: {{person.age}} - Job: {{person.job}} - Date: {{person.date | date: 'dd/MM/yyyy'}}</p>
+                }
+            } @empty {
+                <div class="alert alert-primary" role="alert">
+                    Vaya, parece que no hay ninguna persona
+                </div>
+            }
+        </div>
+
+        <div class="col">
+            <h1>Filter</h1>
+            <label for="filter">Filter:</label>
+            <input type="text" id="filter" #filter>
+            <button class="btn btn-primary" (click)="filterByName(filter)">Filter</button>
+        </div>
+
+        <div class="col">
+            <h1>Ejemplo If</h1>
+            @if(newMessages) {
+                <div class="alert alert-danger" role="alert">
+                    Tienes mensajes nuevos!!!
+                </div>
+            } @else {
+                <div class="alert alert-success" role="alert">
+                    Enhorabuena, tu bandeja de entrada está vacía
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="row">
+        @for(person of people; track person.name) {
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{person.name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">{{person.surname}}</h6>
+                    <p class="card-text">{{person.job}}</p>
+                    <a href="#" class="card-link">{{person.age}}</a>
+                    <a href="#" class="card-link">{{person.premium}}</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
