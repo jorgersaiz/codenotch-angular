@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Person } from '../../models/person';
+import { Person } from '../../shared/models/person';
 import { CommonModule } from '@angular/common';
 import { EntrecomillarPipe } from '../../pipes/entrecomillar.pipe';
 

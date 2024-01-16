@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            @for(user of userList; track user.userName) {
+                <app-card [userName]="user.userName" [email]="user.email" [img]="user.img"></app-card> 
+            } @empty {
+                <h1>No hay usuarios</h1>
+            }
+            <!-- <app-card [userName]="user.userName" [email]="user.email" [img]="user.img"></app-card>  -->
+        </div>
+
+        <div class="col">
+            <app-user-form (saveUserData)="getUserData($event)"></app-user-form>
+        </div>
+    </div>
+</div>

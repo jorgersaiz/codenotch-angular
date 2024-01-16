@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Navigation } from '../../models/navigation';
+import { Navigation } from '../../shared/models/navigation';
 
 @Component({
   selector: 'app-header',
@@ -30,6 +30,10 @@ export class HeaderComponent {
     {
       path: '/directives',
       title: 'Directives'
+    },
+    {
+      path: '/parent-child',
+      title: 'Parent-child'
     }
   ]
 }
