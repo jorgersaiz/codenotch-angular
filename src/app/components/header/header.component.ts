@@ -34,6 +34,10 @@ export class HeaderComponent {
     {
       path: '/parent-child',
       title: 'Parent-child'
+    },
+    {
+      path: '/services',
+      title: 'Services and Routing'
     }
   ]
 }

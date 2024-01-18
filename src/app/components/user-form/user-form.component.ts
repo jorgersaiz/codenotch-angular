@@ -17,6 +17,7 @@ export class UserFormComponent {
 
   public getForm(userName: HTMLInputElement, email: HTMLInputElement, img: HTMLInputElement) {
     const user: User = {
+      id: 1,
       userName: userName.value,
       email: email.value,
       img: img.value

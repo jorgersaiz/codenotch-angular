@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            @for(user of users; track user.id) {
+                <div class="card" style="width: 18rem;" id="{{user.id}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ user.userName }}</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">{{ user.email }}</h6>
+                    </div>
+                </div>
+            } @empty {
+                No hay usuarios
+            }
+        </div>
+        <div class="col">
+            
+            <input type="number" #id>
+            <button class="btn btn-primary" (click)="findUser(id)">Find User</button>
+
+            @if(singleUser) {
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ singleUser.userName }}</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">{{ singleUser.email }}</h6>
+                    </div>
+                </div>
+            }
+
+            @if(noUserText) {
+                <h2>{{noUserText}}</h2>
+            }
+            <button class="btn btn-secondary" (click)="redirect()">Redirect</button>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container">
+    <div class="row">
+        @for(pokemon of pokemonList; track pokemon.name) {
+            <div class="card" style="width: 18rem;">
+                <img src="{{pokemon.url}}" class="card-img-top" >
+                <div class="card-body">
+                  <h5 class="card-title">{{ pokemon.name }}</h5>
+                </div>
+              </div>
+        } @empty {
+            No hay usuarios
+        }
+    </div>
+</div> -->

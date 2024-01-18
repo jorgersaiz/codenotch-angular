@@ -5,6 +5,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { DataBindingComponent } from './pages/data-binding/data-binding.component';
 import { DirectivesComponent } from './pages/directives/directives.component';
 import { ParentChildComponent } from './pages/parent-child/parent-child.component';
+import { ServicesAndRoutingComponent } from './pages/services-and-routing/services-and-routing.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/homepage', pathMatch: 'full' },
@@ -14,4 +15,6 @@ export const routes: Routes = [
     { path: 'data-binding', component: DataBindingComponent },
     { path: 'directives', component: DirectivesComponent },
     { path: 'parent-child', component: ParentChildComponent },
+    { path: 'services', component: ServicesAndRoutingComponent },
+    { path: 'services/:id', component: ServicesAndRoutingComponent },
 ];
